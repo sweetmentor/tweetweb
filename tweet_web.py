@@ -11,7 +11,8 @@ def get_index():
 @app.route("/results")
 def results():
  
-    results = search_for_tweets(request.args['search'],10)
+    results = search_for_tweets(request.args['search'], 10)
+    
         
     return render_template("results.html", tweets = results)
 
