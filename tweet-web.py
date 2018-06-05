@@ -1,11 +1,11 @@
 import os
-from flask import Flask
+from flask import Flask, redirect, render_template, request
 
 app= Flask(__name__)
 
 @app.route("/")
 def get_index():
-    return 'Hello world'
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
